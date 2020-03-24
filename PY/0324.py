@@ -22,14 +22,14 @@ class Car(): # 创建汽车类
     def increment_odometer(self,miles): # 增加指定公里数 （测试重写父类）
         self.odometer_reading += miles
 
-class ElectricCar(Car): #创建子类电动汽车
-    '''电动汽车的独特之处'''
-    def __init__(self,make,model,year):
-        super().__init__(make,model,year)#继承父类属性
-
-my_tesla = ElectricCar('tesla','model s',2016)
-print(my_tesla.descriptive())
-
+class Battery():
+    '''一次模拟电动汽车电瓶的简单尝试'''
+    def __init__(self,battery_size=70):
+        self.battery_size = battery_size
+    
+    def describe_battery(self):
+        print("This car has a " + str(self.battery_size) + "-kw battery.")
+        
 class ECar(Car): 
     '''电动汽车的独特之处'''
     def __init__(self,make,model,year):
@@ -38,11 +38,3 @@ class ECar(Car):
     
     def read_battery(self):
         print('这辆车电瓶容量：' + str(self.battery_size))
-    
-    def increment_odometer(self): #与父类的方法名相同
-        print('测试重写父类的方法。')
-
-my_tesla11 = ECar('tesla','model s',2016)
-my_tesla11.read_battery()
-my_tesla11.increment_odometer()
-
