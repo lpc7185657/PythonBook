@@ -51,7 +51,7 @@ class User():
 
     def greet_user(self):
         print('Hello! ' + self.first_name.title() + ' '
-         + self.last_name.title() + '.')
+        + self.last_name.title() + '.')
 
     def increment_login_attempts(self):
         self.login_attempts += 1
