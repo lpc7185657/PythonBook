@@ -34,7 +34,7 @@ class User():
 
     def greet_user(self):
         print('Hello! ' + self.first_name.title() + ' '
-         + self.last_name.title() + '.')
+        + self.last_name.title() + '.')
 
 a = User('li','pengcheng',29)
 a.describe_user()
